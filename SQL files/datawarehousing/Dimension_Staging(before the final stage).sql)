@@ -1,0 +1,36 @@
+create table W_dept_emp_DS(
+emp_no int,
+dept_no varchar(20),
+from_data date,
+integration_id varchar(50),
+ETL_insert_DT datetime,
+ETL_update_DT datetime);
+
+create table W_dept_manager_DS(
+emp_no int,
+dept_no varchar(20),
+from_date date,
+to_date date,
+integration_id varchar(50),
+ETL_insert_DT datetime,
+ETL_update_DT datetime);
+
+create table W_Employees_DS(
+emp_no int,
+birt_date date,
+firstname varchar(20),
+last_name varchar(20),
+gender varchar(20),
+hire_date date,
+integraion_id,
+ETL_insert_DT datetime,
+ETL_update_DT datetime);
+
+create table W_titles_DS(
+emp_no int,
+title varchar(20),
+from_date date,
+to_date date,
+integration_id varchar(50),
+ETL_insert_DT datetime,
+ETL_update_DT datetime);
