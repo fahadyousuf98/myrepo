@@ -1,0 +1,4 @@
+CREATE TABLE foo (
+    `creation_time`     DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `modification_time` DATETIME ON UPDATE CURRENT_TIMESTAMP
+)
