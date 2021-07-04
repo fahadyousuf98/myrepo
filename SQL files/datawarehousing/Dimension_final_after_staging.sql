@@ -37,5 +37,13 @@ from_date date,
 to_date date,
 integration_id varchar(50),
 ETL_insert_DT datetime,
+ETL_update_DT datetime)
+
+create table W_departments_D(
+row_id int,
+dept_no varchar(20),
+dept_name varchar(20),
+integration_id varchar(50),
+ETL_insert_DT datetime,
 ETL_update_DT datetime);
 
