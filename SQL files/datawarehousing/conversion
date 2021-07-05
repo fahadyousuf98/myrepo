@@ -1,0 +1,5 @@
+CAST(emp_no as char(50)) integration_id
+
+
+if for example we are making an integration_id out of the column 'emp_no' then the default datatype would be integer.
+Now, If we were to convert this data type from integer to string, then it would be done by the query above.
