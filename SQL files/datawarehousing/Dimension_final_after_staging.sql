@@ -3,6 +3,7 @@ row_id int,
 emp_no int,
 dept_no varchar(20),
 from_data date,
+to_date date,
 integration_id varchar(50),
 ETL_insert_DT datetime,
 ETL_update_DT datetime);
@@ -25,7 +26,7 @@ firstname varchar(20),
 last_name varchar(20),
 gender varchar(20),
 hire_date date,
-integraion_id,
+integration_id varchar(50),
 ETL_insert_DT datetime,
 ETL_update_DT datetime);
 
