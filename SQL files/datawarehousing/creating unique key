@@ -1,0 +1,4 @@
+CREATE UNIQUE INDEX uidx_integration_id
+ON W_dept_manager_D (integration_id);
+
+
