@@ -1,0 +1,10 @@
+"for mySQL"
+
+sysdate();
+
+
+"for SQL server"
+
+
+getdate();
+
