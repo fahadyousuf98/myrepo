@@ -1,0 +1,5 @@
+select integration_id,count(*) from tablename
+
+group by integration_id
+
+having count(*) > 1
