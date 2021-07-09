@@ -1,0 +1,11 @@
+select salaries.emp_no,
+dept_emp.dept_no,
+salaries.salary,
+salaries.from_date,
+salaries.to_date,
+concat(dept_emp.emp_no,'~',dept_emp.dept_no) integration_id,
+sysdate() etl_insert_dt,
+sysdate() etl_update_dt
+from salaries
+inner join dept_emp 
+on salaries.emp_no = dept_emp.emp_no;
