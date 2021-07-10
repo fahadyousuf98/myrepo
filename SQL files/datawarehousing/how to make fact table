@@ -1,0 +1,13 @@
+select 
+ED.row_id EMPLOYEE_WID,
+DD.row_id DEPARTMENT_WID,
+TD.row_id TITLE_WID,
+FD.DateKey FROM_DATE_WID,
+TTD.DateKey TO_DATE_WID,
+FS.salary
+from W_salaries_FS          FS
+INNER JOIN W_Employees_D    ED  on   ED.emp_no  =  FS.emp_no
+INNER JOIN W_departments_D  DD  on   DD.dept_no =  FS.dept_no
+INNER JOIN W_titles_D       TD  on   TD.emp_no  =  FS.emp_no 
+inner join Dim_Date         FD  on   FD.Date    =  FS.from_date 
+inner join Dim_Date         TTD on   TTD.Date   =  FS.TO_date ;
