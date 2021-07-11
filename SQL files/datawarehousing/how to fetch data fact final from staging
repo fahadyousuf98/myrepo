@@ -24,8 +24,8 @@ FS.salary,
 FD.DateKey FROM_DATE_WID,
 TTD.DateKey TO_DATE_WID, 
 FS.integration_id,
-FS.ETL_insert_DT,
-FS.ETL_update_DT
+getdate() ETL_insert_DT,
+getdate() ETL_update_DT
 
 from W_salaries_FS               FS
 INNER JOIN W_Employees_D         ED   on    ED.emp_no  =  FS.emp_no
