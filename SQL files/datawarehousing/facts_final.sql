@@ -9,4 +9,5 @@ FROM_DATE_WID INT,
 TO_DATE_WID INT,
 integration_id varchar(50),
 ETL_insert_DT datetime,
-ETL_update_DT datetime);
+ETL_update_DT datetime,
+row_id int identity(1,1));
