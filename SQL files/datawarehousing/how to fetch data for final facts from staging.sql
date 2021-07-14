@@ -19,6 +19,6 @@ left outer JOIN W_dept_manager_D      DMD  on    DMD.dept_no = DED.dept_no and D
 and DED.from_date = DMD.from_date 
 and DED.to_date between DMD.from_date and DMD.to_date
 inner join Dim_Date                 FD   on    FD.Date    =  FS.from_date 
-left outer join Dim_Date                 TTD  on    isnull(TTD.Date, '1901-01-01')   =  isnull(FS.TO_date, '1901-01-01')
+left outer join Dim_Date            TTD  on    isnull(TTD.Date, '1901-01-01')   =  isnull(FS.TO_date, '1901-01-01')
 where year(FS.from_date) = '2000'
 ;
