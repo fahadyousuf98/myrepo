@@ -10,9 +10,20 @@ concat(DMD.emp_no,'~',DED.from_date,'~',DED.to_date) integration_id,
 sysdate() etl_insert_dt,
 sysdate() etl_update_dt
 from salaries DED
-left outer JOIN dept_emp      DMD  on     DMD.emp_no = DED.emp_no
-and DED.from_date = DMD.from_date 
+inner JOIN dept_emp      DMD  on     DMD.emp_no = DED.emp_no
 and DED.to_date between DMD.from_date and DMD.to_date
+where concat(ded.emp_no,'~',ded.from_date,'~',ded.to_date) not in
+(select 
+td.a from (select
+concat(DMD.emp_no,'~',DED.from_date,'~',DED.to_date) a,
+count(*) finding_duplicates
+from salaries DED
+inner JOIN dept_emp  DMD  on     DMD.emp_no = DED.emp_no
+inner join departments d  on     d.dept_no   = dmd.dept_no
+and ded.to_date between dmd.from_date and dmd.to_date
+group by concat(DMD.emp_no,'~',DED.from_date,'~',DED.to_date)
+having count(*) > 1 )td
+)
 
 ///////////////////////////////////////////
 
