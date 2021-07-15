@@ -1,3 +1,25 @@
+--to write when inserting in the FS table
+
+
+select DED.emp_no,
+DMD.dept_no,
+DED.salary,
+DED.from_date,
+DED.to_date,
+concat(DMD.emp_no,'~',DED.from_date,'~',DED.to_date) integration_id,
+sysdate() etl_insert_dt,
+sysdate() etl_update_dt
+from salaries DED
+left outer JOIN dept_emp      DMD  on     DMD.emp_no = DED.emp_no
+and DED.from_date = DMD.from_date 
+and DED.to_date between DMD.from_date and DMD.to_date
+
+///////////////////////////////////////////
+
+-- to write when inserting in the final fact table
+
+
+
 select 
 isnull(ED.row_id,0) EMPLOYEE_WID,
 isnull(DD.row_id,0) DEPARTMENT_WID,
