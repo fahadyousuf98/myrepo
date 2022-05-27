@@ -1,0 +1,10 @@
+1. First Open Anaconda Prompt and run the following command to create a new virtual environment 
+	conda create conda create --name powerbi_python python=3       # 	here 'powerbi_python' is the name of our new environment
+2. Next activate the environment by the following command
+	conda activate powerbi_python
+3. Once it is activated with out any errors, we have to install each and every library that our python script may be using.
+It is done by the following command
+	pip install pandas                                             #  here i wanted to install pandas 
+4. For Finding out the location of our newly created enviroment, it is usually placed in the following location on our computer
+	C:\Users\fahad.yousuf\Anaconda3\envs\powerbi_python
+
